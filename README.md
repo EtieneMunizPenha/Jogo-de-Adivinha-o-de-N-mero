@@ -1,0 +1,1 @@
+# Jogo-de-Adivinha-o-de-N-mero
