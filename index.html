@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Jogo de Adivinhação de Número</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="text-title">Adivinhe o número</h1>
+      <h3 class="text-instruction">
+        Escreva um número entre 1 e 50 no campo abaixo e em seguida clique no
+        botão MOSTRAR NÚMERO
+      </h3>
+      <div class="wrapper">
+        <p id="tries-text">
+          Você possui 5 tentativas. Você já tentou <span id="tries-qtd"></span>
+        </p>
+        <label id="label-1" for="input-number"
+          >Eu aposto no número:<input
+            id="input-number"
+            class="number"
+            type="text"
+            placeholder="Escreva seu número"
+          />
+        </label>
+        <p id="result-text">Resultado: <span id="result"></span></p>
+      </div>
+      <div class="btn-wrapper">
+        <button class="button" id="btn-show">MOSTRAR NÚMERO</button>
+        <button class="button" id="btn-reset">RESET</button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

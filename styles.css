@@ -1,0 +1,333 @@
+*,
+*::before,
+*::after {
+  font-size: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Indie Flower", cursive;
+}
+
+:root {
+  --black: #000000;
+  --dark-gray: #808080;
+  --gray: #a9a9a9;
+  --light-gray: #d3d3d3;
+  --light-gray2: #f5f6f7;
+  --white: #ffffff;
+  --indigo: #4b0082;
+  --medium-purple: #9370db;
+  --purple: #800080;
+  --light-purple: #da70d6;
+  --dark-violet: #9400d3;
+  --state-blue: #6a5acd;
+  --very-dark-blue: #14213d;
+  --midnight-blue: #191970;
+  --dark-blue: #00008b;
+  --medium-blue: #0000cd;
+  --blue: #0000ff;
+  --royal-blue: #4169e1;
+  --light-blue: #add8e6;
+  --steel-blue: #4682b4;
+  --deep-pink: #ff1493;
+  --hot-pink: #ff69b4;
+  --pale-pink: #db7093;
+  --pink: #ffc0cb;
+  --light-pink: #fffff0;
+  --light-pink2: #ffb6c1;
+  --light-coral: #f08080;
+  --dark-pink: #dc143c;
+  --maroon: #800000;
+  --dark-red: #8b0000;
+  --brick-red: #b22222;
+  --brown-red: #a52a2a;
+  --salmon: #fa8072;
+  --dark-salmon: #ff627a;
+  --dark-salmon2: #e9967a;
+  --light-salmon: #ffeded;
+  --light-salmon2: #ffa07a;
+  --coral: #ff7f50;
+  --tomato: #ff6347;
+  --red: #ff0000;
+  --aqua: #00ffff;
+  --dark-turquoise: #00ced1;
+  --light-sea-green: #20b2aa;
+  --dark-orange: #ff4500;
+  --orange: #ff8c00;
+  --light-orange: #ffe56c;
+  --light-orange2: #ffa500;
+  --gold: #ffd700;
+  --yellow: #ffff00;
+  --khaki: #f0e68c;
+  --light-green: #90ee90;
+  --dark-green: #006400;
+  --green: #008000;
+  --forest-green: #228b22;
+  --yellow-green: #9acd32;
+  --oliva-green: #6b8e23;
+  --beige: #f5f5dc;
+  --seadhell: #fff5ee;
+  --comsilk: #fff8dc;
+  --blanched-almond: #ffebcd;
+  --bisque: #ffe4c4;
+  --lemon-chiffon: #fffacd;
+  --peach-puff: #ffdab9;
+  --moccasin: #ffe4b5;
+  --pale-goldenrod: #eee8aa;
+  --misty-rose: #ffe4e1;
+  --lavender-blush: #fff0f5;
+  --lavender: #e6e6fa;
+  --thistle: #d8bfd8;
+  --powder-blue: #b0e0e6;
+  --goldenrod: #daa520;
+  --dark-goldenrod: #b8860b;
+  --saddle-brown: #8b4513;
+  --peru: #cd853f;
+  --chocolate: #d2691e;
+  --sandy-brown: #f4a460;
+  --wheat: #f5deb3;
+  --burly-wood: #deb887;
+  --tan: #d2b48c;
+  --azul-marinho: #001f3f;
+  --azul-intermediario: #003366;
+  --dourado-vivo: #ffd700;
+  --branco-dourado: #fff8e7;
+}
+
+body {
+  background-color: var(--azul-marinho);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text-title {
+  font-size: 6rem;
+  text-align: center;
+  color: var(--dourado-vivo);
+}
+
+.text-instruction {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--dourado-vivo);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 80%;
+}
+
+#label-1 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--dourado-vivo);
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  width: 25rem;
+  height: 4rem;
+  background-color: transparent;
+  border: solid 0.1rem var(--dourado-vivo);
+  border-radius: 10rem;
+  color: var(--dourado-vivo);
+  font-size: 2rem;
+  text-align: center;
+  display: flex; /* Novo */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 0 1rem; /* Ajuste opcional */
+  transition: all 0.3s ease;
+}
+
+.number:focus {
+  transform: scale(1.02);
+}
+
+#input-number {
+  color: rgb(211, 211, 211, 70%);
+  text-align: center;
+}
+#input-number::placeholder {
+  font-size: var(--placeholder-font-size, 2rem); /* Valor padrão */
+}
+
+input:focus {
+  outline: none; /* Remove a borda azul padrão */
+}
+
+#tries-text,
+#result-text,
+#tries-qtd,
+#result {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Estilo dos textos */
+#tries-text,
+#result-text {
+  color: var(--dourado-vivo);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+#tries-qtd,
+#result {
+  color: var(--branco-dourado); /* Opção mais suave */
+}
+
+/*---BOTÕES----*/
+.btn-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.button {
+  background-image: linear-gradient(
+    45deg,
+    var(--azul-marinho),
+    var(--azul-intermediario),
+    var(--dourado-vivo)
+  );
+  width: 25rem;
+  height: 5rem;
+  border: solid 0.1rem var(--dourado-vivo);
+  box-shadow: 0 0 15px var(--dourado-vivo),
+    /* Sombra dourada externa */ 0 0 5px rgba(255, 215, 0, 0.5) inset; /* Sombra interna suave */
+  border-radius: 10rem;
+  font-size: 2rem;
+  color: var(--white);
+  margin-top: 4rem;
+}
+
+/*---QUEIRES----*/
+@media (max-width: 900px) {
+  *,
+  *::before,
+  *::after {
+    font-size: 9.5px;
+  }
+
+  .text-title {
+    font-size: 4rem;
+    margin-top: 5rem;
+  }
+
+  .text-instruction {
+    font-size: 2rem;
+  }
+
+  #label-1,
+  #tries-text,
+  #result-text,
+  #tries-qtd,
+  #result {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    width: 22rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .text-title {
+    margin-top: 2rem;
+  }
+
+  .container {
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 470px) {
+  #label-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  *,
+  *::before,
+  *::after {
+    font-size: 9px;
+    margin: auto;
+  }
+
+  .container {
+    gap: 3rem;
+  }
+
+  .text-title {
+    font-size: 2.5rem;
+  }
+
+  .text-instruction {
+    font-size: 1.8rem;
+  }
+
+  .btn-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 395px) {
+  .container,
+  .wrapper,
+  .btn-wrapper {
+    gap: 1rem;
+  }
+
+  .number {
+    width: 22rem;
+  }
+
+  .button {
+    width: 21rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 230px) {
+  *,
+  *::before,
+  *::after {
+    font-size: 8px;
+  }
+
+  .number {
+    width: 20rem;
+  }
+}
